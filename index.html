@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Currículo</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
 </head>
 <body>
     
@@ -15,6 +17,25 @@
         <p>Email: kaiiqueln03@gmail.com</p>
         <p>UNICEUB: Análise e Desenvolvimento de Sistemas</p>
     </header>
+    
+    <button id="gerarPDF">Gerar PDF da página</button>
+    
+    <script>
+    const botaoGerarPDF = document.getElementById('gerarPDF');
+
+  <script>
+    const botaoGerarPDF = document.getElementById('gerarPDF');
+
+    botaoGerarPDF.addEventListener('click', () => {
+        const elementoHTML = document.documentElement;
+
+        html2pdf()
+            .from(elementoHTML)
+            .save('pagina_web.pdf'); 
+    });
+</script>
+
+
 
     <div class="container">
         <h2>OBJETIVO</h2>
